@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" viewport="device=device-width, initial-scale=1.0" />
+    <title>Jovian Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-
+    0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUp
+    FmBp4vmVor" crossorigin="anonymous"
+    />
+    <style>
+        h1 {
+            font-size: 40px;
+            font-family: Roboto, helvetica, 'sans-serif'; 
+            text-align: center; 
+            margin-top: 0;
+            color: rgb(100, 100, 100);
+        }
+        h2 {
+            font-family: Roboto, helvetica, 'sans-serif';
+            font-size: 32px;
+            text-align: center;
+            color: rgb(100, 100, 100);
+        }
+
+        header div {
+            margin-bottom: 0;
+        }
+
+        #banner {
+            width: 360px;
+            object-fit: cover;
+        }
+
+        .bodytext {
+            font-family: Roboto, helvetica, 'sans-serif';
+            color: rgb(80, 80, 80);
+        }
+
+        #container {
+            max-width: 720px;
+            margin: 0 auto 0 auto;
+        }
+    </style>
+</head>
+<header>
+    <div>
+        <img class="img-fluid" id="banner" src="https://jovian.com/jovian_logo.svg" alt="Jovian icon">
+    </div>
+</header>
+<body>
+    <div id="container">
+        <h1 class="text-center mt-2 mb-4">{{ company_name }} Careers</h1>
+        <h2 class="text-center">About Jovian</h2>
+        <p class="lead">Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem conubia taciti ultricies purus facilisi tellus ex natoque. Lorem ligula pharetra erat etiam pulvinar dolor condimentum lectus potenti. Fringilla fermentum proin; mollis ultrices taciti leo montes mollis? Aliquam euismod natoque laoreet cubilia consectetur donec dui donec. Nibh nullam dis orci leo; sodales orci efficitur justo. Iaculis mi sodales et id augue natoque sed volutpat felis.</p>
+        <p class="lead">Facilisis leo at ullamcorper nascetur vivamus convallis phasellus elit. Euismod litora elit sociosqu sapien malesuada primis velit est. Elit lobortis vel ex aptent penatibus eros leo pretium. Lorem pellentesque magna nec a nunc hendrerit parturient. Vivamus tellus hendrerit velit sagittis nec vel ornare tristique. Parturient libero nam, ex id pulvinar posuere. Sed lobortis risus pharetra magnis accumsan aenean nullam proin.</p>
+        <h2 class="mt-2">Open Positions</h2>
+        <div class="bodytext">
+            {% for job in jobs %}
+            {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+        <div class="text-center">
+        <button class="btn btn-primary btn-lg">Contact Us</button>
+        </div>
+        <p class="mt-4">Copyright 2022, Jovian</p>
+    </div>
+</body>
+</html>
