@@ -44,8 +44,9 @@
     </style>
 </head>
 <header>
+    {% include 'nav.html' %}
     <div>
-        <img class="img-fluid" id="banner" src="https://jovian.com/jovian_logo.svg" alt="Jovian icon">
+        <img class="img-fluid" id="banner" style="padding-top: 50px;" src="https://jovian.com/jovian_logo.svg" alt="Jovian icon">
     </div>
 </header>
 <body>
@@ -66,4 +67,5 @@
         <p class="mt-4">Copyright 2022, Jovian</p>
     </div>
 </body>
+{% include 'footer.html' %}
 </html>

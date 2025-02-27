@@ -5,8 +5,6 @@
         {% if job.salary %}<div><strong>Salary:</strong> {{ job.salary }}</div>{% endif %}
     </div>
     <div style="position: absolute; right: 50px; top: 10px">
-    <button type="button" class="btn btn-outline-primary">
-        Apply
-    </button>
+        <a href="mailto:hello@jovian.ai?subject='Application for {{ job.title }}" type="button" class="btn btn-outline-primary">Apply</a>
     </div>
 </div>
